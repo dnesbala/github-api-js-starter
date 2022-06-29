@@ -70,6 +70,18 @@ document.getElementById("clickBtn").addEventListener("click", ram.getMarks);
 window.addEventListener("load", ram.getMarks);
 ```
 
+# Template Literals
+
+- Template Literals use back-ticks (``) rather than the quotes ("") to define a string.
+
+```
+const firstName = "John";
+const lastName = "Doe";
+
+const greetUser = `Welcome ${firstName}, ${lastName}!`;
+console.log(greetUser); //Welcome John, Doe!
+```
+
 # Array Methods
 
 [![Array Methods](https://i.redd.it/t2f5w9bms1271.jpg)](https://i.redd.it/t2f5w9bms1271.jpg)
