@@ -1,4 +1,5 @@
 import React from "react";
+import Counter from "./components/Counter";
 import Person from "./components/Person";
 
 const personList = [
@@ -26,11 +27,12 @@ const personList = [
 
 const App = () => {
   return (
-    <div className="container">
-      {personList.map((person, index) => (
-        <Person key={person.id} name={person.name} age={person.age} />
-      ))}
-    </div>
+    // <div className="container">
+    //   {personList.map((person, index) => (
+    //     <Person key={person.id} name={person.name} age={person.age} />
+    //   ))}
+    // </div>
+    <Counter />
   );
 };
 
