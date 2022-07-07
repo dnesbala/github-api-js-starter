@@ -7,6 +7,12 @@ const Person = (props) => {
   //   props.name = "Test"; // Props are read only
   const { name, age } = props;
 
+  const handleClick = (e, str) => {
+    console.log(e);
+    console.log(str);
+    console.log("Clicked");
+  };
+
   return (
     <div className="card mt-4 p-4">
       <img
@@ -18,9 +24,14 @@ const Person = (props) => {
       <div className="card-body">
         <h5 className="card-title">Name = {name}</h5>
         <p className="card-text">Age = {age}</p>
-        <a href="#" className="btn btn-primary">
+        <button
+          className="btn btn-primary"
+          onClick={(e) => handleClick(e, "Test")}
+          // onClick={handleClick()} // Direct call, Execute automatically
+          // onClick={handleClick}
+        >
           View Details
-        </a>
+        </button>
       </div>
     </div>
   );
