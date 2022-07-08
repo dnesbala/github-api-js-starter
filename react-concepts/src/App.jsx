@@ -1,6 +1,7 @@
 import React from "react";
 import Counter from "./components/Counter";
 import Person from "./components/Person";
+import ToggleLight from "./components/ToggleLight";
 
 const personList = [
   {
@@ -32,7 +33,8 @@ const App = () => {
     //     <Person key={person.id} name={person.name} age={person.age} />
     //   ))}
     // </div>
-    <Counter />
+    // <Counter />
+    <ToggleLight />
   );
 };
 
