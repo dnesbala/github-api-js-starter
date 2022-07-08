@@ -1,5 +1,6 @@
 import React from "react";
 import Counter from "./components/Counter";
+import FormExample from "./components/FormExample";
 import Person from "./components/Person";
 import ToggleLight from "./components/ToggleLight";
 
@@ -34,7 +35,8 @@ const App = () => {
     //   ))}
     // </div>
     // <Counter />
-    <ToggleLight />
+    // <ToggleLight />
+    <FormExample />
   );
 };
 
