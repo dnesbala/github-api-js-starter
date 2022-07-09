@@ -1,12 +1,19 @@
 import React, { useState } from "react";
 
 const FormExample = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
+  const [values, setValues] = useState({
+    name: "",
+    email: "",
+  });
 
-  const handleNameChange = (e) => {
-    setName(e.target.value);
-    // console.log(e.target.value);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    console.log(name, value);
+
+    setValues({
+      ...values,
+      [name]: value,
+    });
   };
 
   return (
@@ -17,8 +24,9 @@ const FormExample = () => {
           <input
             type="text"
             id="name"
-            value={name}
-            onChange={handleNameChange}
+            value={values.name}
+            name="name"
+            onChange={handleChange}
           />
         </div>
 
@@ -27,17 +35,17 @@ const FormExample = () => {
           <input
             type="email"
             id="email"
-            value={email}
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
+            value={values.email}
+            name="email"
+            onChange={handleChange}
           />
         </div>
 
         <input type="submit" />
+        <br />
+        <br />
 
-        <p>Name = {name}</p>
-        <p>Email = {email}</p>
+        <pre>{JSON.stringify(values, undefined, 2)}</pre>
       </form>
     </div>
   );
